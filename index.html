@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital management website</title>
+
+    <script src="https://kit.fontawesome.com/c1df782baf.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+
+    <header>
+        <div class="logo"><img src="images/logo3.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="#Home">الرئيسية</a>
+            <a href="#about">من نحن</a>
+            <a href="#Service">الخدمات</a>
+            <a href="#Home">المعرض</a>
+            <a href="#Home">المدونة</a>
+            <a href="#Home">اتصل بنا</a>
+        </nav>
+
+        <div class="right-icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+            <div class="btn">حجز موعد</div>
+        </div>
+    </header>
+
+    <!-- ============ قسم التحكم في المرضى ============ -->
+    <section class="patient-control-section">
+        <div class="control-container">
+            <div class="search-patient-box">
+                <h3><i class="fa-solid fa-magnifying-glass"></i> ابحث عن مريض</h3>
+                <div class="search-input-group">
+                    <input type="text" id="searchPatientInput" placeholder="ادخل الاسم أو رقم الهاتف...">
+                    <button onclick="searchPatientInHeader()"><i class="fa-solid fa-search"></i> بحث</button>
+                </div>
+                <div id="searchResultsHeader" class="search-results"></div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="register.html" class="btn-control register">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>تسجيل مريض جديد</span>
+                </a>
+                <a href="book.html" class="btn-control book">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>حجز موعد</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ============ نهاية القسم المضاف ============ -->
+
+    <!-- header section ended -->
+
+    <!-- Home section started -->
+
+        <div class="main-home">
+
+            <div class="home">
+                <div class="home-left-content">
+                    <span>مرحبًا بكم في إدارة المستشفى</span>
+                    <h2>نهتم بصحة<br> مرضايانا</h2>
+                    <p class="lorem">نقدم رعاية طبية متكاملة باستخدام أحدث التقنيات وأكفأ الكوادر الطبية لضمان أفضل النتائج لمرضاينا.</p>
+                
+                    <div class="home-btn">
+                        <a href="">اقرأ المزيد</a>
+                        <a class="homebtnsec" href="">حجز موعد</a>
+                    </div>
+                    
+                </div>
+
+                <div class="home-right-content">
+                    <div class="hero-carousel">
+                        <div class="carousel-slide active">
+                            <img src="images/hero1.jpg" alt="فريق الأطباء">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/hero2.png" alt="غرفة العمليات">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/hero3.jpg" alt="استقبال المرضى">
+                        </div>
+                        
+                        <!-- Indicators -->
+                        <div class="carousel-indicators">
+                            <span class="indicator active" onclick="currentSlide(0)"></span>
+                            <span class="indicator" onclick="currentSlide(1)"></span>
+                            <span class="indicator" onclick="currentSlide(2)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="technology">
+            <div class="main-technology">
+                
+                <div class="inner-technology">
+                    <span></span>
+                    <i class="fi fi-tr-hands-heart"></i>
+                    <h2>الجودة والسلامة</h2>
+                    <p>مستشفى دلمونت تستخدم أحدث التقنيات وتوظف فريقًا من الخبراء الحقيقيين.</p>
+                </div>
+
+                <div class="inner-technology">
+                    <span></span>
+                    <i class="fi fi-rr-doctor"></i>
+                    <h2>فريق طبي متميز</h2>
+                    <p>أطباؤنا حاصلون على أعلى الشهادات العالمية ويمتلكون خبرة تمتد لعقود.</p>
+                </div>
+
+                <div class="inner-technology">
+                    <span></span>
+                    <i class="fi fi-tr-user-md"></i>
+                    <h2>رعاية مخصصة</h2>
+                    <p>نهتم بكل مريض كحالة فريدة، ونقدم له خطة علاجية تناسب حالته.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- home section ends -->
+
+    <!-- About us section started -->
+
+        <div class="main-about" id="about">
+
+            <div class="about-heading">من نحن</div>
+
+            <div class="inner-main-about">
+                <div class="about-inner-content-left">
+                    <img src="images/about1.png" alt="">
+                </div>
+
+                <div class="about-inner-content">
+                    <div class="about-right-content">
+                        <h2>نحن نُحدِث معايير جديدة في البحث <br> والرعاية السريرية.</h2>
+                        <p>نقدم أشمل الخدمات الطبية لضمان حصول كل شخص على مساعدة طبية نوعية.</p>
+                        <p class="aboutsec-content">
+                            تطورت عيادتنا لتصبح منشأة عالمية لعلاج فقدان الأسنان، والتجميل السني، وزراعة الأسنان المتقدمة. نحن من أكثر مزودي خدمات الزراعة المؤهلين في أستراليا، بخبرة تزيد عن 30 عامًا.
+                        </p>
+                        <button class="aboutbtn">اقرأ المزيد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- About us section ends -->
+
+    <!-- our doctors -->
+
+        <div class="main-doctors">
+            <div class="doctors-heading">
+                <h2>أطباؤنا</h2>
+            </div>
+
+            <div class="main-inner-doctor">
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team1.jpg" alt="">
+
+                    <div class="doc-details">
+                        <h2>د. أحمد</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team2.jpg" alt="">
+                    <div class="doc-details">
+                        <h2>د. سارة</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team3.jpg" alt="">
+                    <div class="doc-details">
+                        <h2>د. يوسف</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team4.jpg" alt="">
+                    <div class="doc-details">
+                        <h2>د. ليلى</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team5.jpg" alt="">
+                    <div class="doc-details">
+                        <h2>د. خالد</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+
+                <div class="doc-poster">
+                    <div class="doc-icons">
+                        <i class="fa-solid fa-share"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="images/team6.jpg" alt="">
+
+                    <div class="doc-details">
+                        <h2>د. نورا</h2>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- our doctors ended -->
+
+    <!-- our services -->
+
+    <div class="our-service" id="Service">
+        <div class="service-heading">
+            <h2>خدماتنا</h2>
+        </div>
+
+        <div class="main-services">
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+                <h3>الفحوصات الطبية</h3>
+                <p>نقدم إجراءات طبية شاملة للمرضى الداخلين والخارجين ونفخر بإنجازات فريقنا.</p>
+            </div>
+
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-regular fa-hospital"></i>
+                </div>
+                <h3>الإقامة الطبية</h3>
+                <p>غرف مريحة ومجهزة بأعلى المواصفات لضمان راحة المريض.</p>
+            </div>
+
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h3>أمراض القلب</h3>
+                <p>تشخيص وعلاج أمراض القلب باستخدام تقنيات حديثة.</p>
+            </div>
+
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <h3>السجلات الطبية</h3>
+                <p>إدارة إلكترونية دقيقة للسجلات الطبية لتسهيل المتابعة.</p>
+            </div>
+
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h3>إدارة المواعيد</h3>
+                <p>نظام ذكي لإدارة المواعيد يقلل من وقت الانتظار.</p>
+            </div>
+
+            <div class="inner-services">
+                <div class="service-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3>استشارات طبية</h3>
+                <p>استشارات متخصصة عبر الإنترنت أو في العيادة مع أفضل الأطباء.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- our services ended -->
+
+    <!-- customer review -->
+   
+        <div class="main-review">
+            <section>  
+            <div class="review-heading">
+                <h1>آراء المرضى</h1>
+            </div>
+
+            <div class="main-inner-review">
+
+                <div class="review-inner-content">
+
+                    <div class="review-box">
+                        <img src="images/pic1.png" alt="">
+
+                        <h2>لارا جون</h2>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+    
+                        <div class="review-text">
+                            <p>تجربتي مع المستشفى كانت ممتازة، من الاستقبال إلى الخروج. الفريق الطبي ودود ومحترف.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="review-box">
+                        <img src="images/pic2.png" alt="">
+
+                        <h2>محمد علي</h2>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+    
+                        <div class="review-text">
+                            <p>خدمات متميزة ودقة في المواعيد. أنصح الجميع بالتعامل مع هذا المركز.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="review-box">
+                        <img src="images/pic3.png" alt="">
+
+                        <h2>سارة كامل</h2>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+    
+                        <div class="review-text">
+                            <p>لم أتوقع هذا المستوى من الرعاية. شكرًا لفريق التمريض على حسن التعامل.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        </div>
+    
+    <!-- customer review -->
+
+    <!-- footer -->
+
+    <div class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <h1>روابط سريعة</h1>
+                <div class="link">
+                    <a href="">الرئيسية</a>
+                    <a href="">من نحن</a>
+                    <a href="">الخدمات</a>
+                    <a href="">المعرض</a>
+                    <a href="">اتصل بنا</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h1>الخدمات</h1>
+                <div class="link">
+                    <a href="">الفحوصات</a>
+                    <a href="">الإقامة</a>
+                    <a href="">الأسنان</a>
+                    <a href="">القلب</a>
+                    <a href="">العيون</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h1>الأطباء</h1>
+                <div class="link">
+                    <a href="">د. أحمد</a>
+                    <a href="">د. سارة</a>
+                    <a href="">د. يوسف</a>
+                    <a href="">د. ليلى</a>
+                    <a href="">جميع الأطباء</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h1>الدعم</h1>
+                <div class="link">
+                    <a href="">الأسئلة الشائعة</a>
+                    <a href="">الخصوصية</a>
+                    <a href="">الشروط</a>
+                    <a href="">المساعدة</a>
+                    <a href="">الشكاوى</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <h1>تابعنا</h1>
+                <div class="link">
+                    <a href=""><i class="fa-brands fa-facebook"></i> فيسبوك</a>
+                    <a href=""><i class="fa-brands fa-instagram"></i> إنستغرام</a>
+                    <a href=""><i class="fa-brands fa-twitter"></i> تويتر</a>
+                    <a href=""><i class="fa-brands fa-youtube"></i> يوتيوب</a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i> لينكدإن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- footer ended -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
